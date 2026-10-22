@@ -1,0 +1,39 @@
+{
+  "name": "placematch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Campus placement management with semantic resume-JD matching (PostgreSQL + pgvector + Next.js)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:setup": "node scripts/db-setup.mjs",
+    "db:seed": "node scripts/seed.mjs",
+    "db:reset": "node scripts/db-setup.mjs && node scripts/seed.mjs",
+    "db:local": "node scripts/local-db.mjs",
+    "test:db": "node scripts/test-db.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.0",
+    "bcryptjs": "3.0.3",
+    "jose": "6.2.12",
+    "next": "16.4.0",
+    "pg": "8.23.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.9",
+    "@electric-sql/pglite-pgvector": "0.0.10",
+    "@electric-sql/pglite-socket": "0.2.12",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "^22",
+    "@types/pg": "^8",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^17",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5"
+  }
+}
